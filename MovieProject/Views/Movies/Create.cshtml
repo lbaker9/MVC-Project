@@ -1,0 +1,47 @@
+﻿@model MovieProject.Models.Movie
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div ng-controller="createController">
+    <form name="createForm" novalidate role="form">
+        <div class="form-group">
+            <label for="Title">Title </label>
+            <span class="label label-danger" ng-show="submitted && createForm.Title.$error.required">Required!</span>
+            <input type="text" name="Title" ng-model="formModel.Title" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="ReleaseDate">Release Date</label>
+            <span class="label label-danger" ng-show="submitted && createForm.ReleaseDate.$error.required">Required!</span>
+            <input type="text" name="ReleaseDate" ng-model="formModel.ReleaseDate" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Genre">Genre</label>
+            <span class="label label-danger" ng-show="submitted && createForm.Genre.$error.required">Required!</span>
+            <input type="text" name="Genre" ng-model="formModel.Genre" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Price">Price</label>
+            <span class="label label-danger" ng-show="submitted && createForm.Price.$error.required">Required!</span>
+            <input type="text" name="Price" ng-model="formModel.Price" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Rating">Rating</label>
+            <span class="label label-danger" ng-show="submitted && createForm.Rating.$error.required">Required!</span>
+            <input type="text" name="Rating" ng-model="formModel.Rating" class="form-control" required />
+        </div>
+
+        <button data-ng-disabled="progress.active()" ng-click="onSubmit(movie)" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
+<div>
+    <a ng-href="/Movies/Index/">Back to Movie List</a>
+</div>

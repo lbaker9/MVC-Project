@@ -1,0 +1,59 @@
+﻿@model MovieProject.Models.Movie
+
+
+<h2>Details</h2>
+
+<div ng-controller="detailscontroller">
+    
+        <div>
+            <h4>Movie</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    Title:
+                </dt>
+
+                <dd>
+                    {{movie.Title}}
+                </dd>
+
+                <dt>
+                    Release Date:
+                </dt>
+
+                <dd>
+                    {{movie.ReleaseDate}}
+                </dd>
+
+                <dt>
+                    Genre:
+                </dt>
+
+                <dd>
+                    {{movie.Genre}}
+                </dd>
+
+                <dt>
+                    Price:
+                </dt>
+
+                <dd>
+                    {{movie.Price}}
+                </dd>
+
+                <dt>
+                    Rating:
+                </dt>
+
+                <dd>
+                    {{movie.Rating}}
+                </dd>
+
+            </dl>
+           
+        </div>
+        <p>
+            <a ng-href="/Movies/Edit/">Edit Movie</a>
+            <a ng-href="/Movies/Index/">Back to Movie List</a>
+        </p>
+    </div>

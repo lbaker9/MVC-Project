@@ -1,0 +1,31 @@
+﻿
+@model IEnumerable<MovieProject.Models.Movie>
+
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-2">Title</div>
+    <div class="col-md-2">Release Date</div>
+    <div class="col-md-2">Genre</div>
+    <div class="col-md-2">Price</div>
+    <div class="col-md-2">Rating</div>
+</div>
+
+
+
+<div class="row" ng-controller="movieController">
+    <div ng-repeat="Movie in movieList">
+        <div class="col-md-2">{{Movie.Title}}</div>
+        <div class="col-md-2">{{Movie.ReleaseDate}}</div>
+        <div class="col-md-2">{{Movie.Genre}}</div>
+        <div class="col-md-2">{{Movie.Price}}</div>
+        <div class="col-md-2">{{Movie.Rating}}</div>
+        <div class="col-md-2">
+            <a ng-href="/Movies/Create/{{Movie.ID}}">Create</a>
+            <a ng-href="/Movies/Edit/{{Movie.ID}}">Edit</a>
+            <a ng-href="~/Movies/Details/{{Movie.ID}}">Details</a>
+            <a ng-href="~/Movies/Delete/{{Movie.ID}}">Delete</a>
+        </div>
+    </div>
+</div>
